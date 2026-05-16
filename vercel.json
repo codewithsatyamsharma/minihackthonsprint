@@ -1,0 +1,13 @@
+{
+  "buildCommand": "pnpm --filter @workspace/api-server run build",
+  "outputDirectory": "artifacts/api-server/dist",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/**/*.mjs": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}

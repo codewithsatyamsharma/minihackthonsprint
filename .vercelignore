@@ -1,0 +1,12 @@
+node_modules
+.git
+.env
+.env.*.local
+*.log
+dist
+artifacts/devhub
+artifacts/mockup-sandbox
+scripts
+.gitignore
+.replit
+.replitignore
