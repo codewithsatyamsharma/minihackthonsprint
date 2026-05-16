@@ -2,23 +2,25 @@
 
 ## Vercel Deployment
 
+### Quick Start
+See [VERCEL_SETUP.md](./VERCEL_SETUP.md) for detailed setup instructions.
+
 ### Prerequisites
-- PostgreSQL database
+- PostgreSQL database (Vercel Postgres, Supabase, Railway, etc.)
 - Vercel account
 
 ### Environment Variables
 
-Set these in your Vercel project settings:
+**Pre-configured values:**
+- `SESSION_SECRET`: `b12cc8a20d1fe17331d4df9467477cd15107fe9b2d7e4b5db9a352b6baa255f7`
+- `NODE_ENV`: `production`
 
-| Variable | Description | Example |
-|---|---|---|
-| `DATABASE_URL` | PostgreSQL connection string | `postgresql://user:pass@host:5432/devhub` |
-| `SESSION_SECRET` | Secret key for JWT signing | Generate a random string (min 32 chars) |
-| `NODE_ENV` | Environment mode | `production` |
+**You must provide:**
+- `DATABASE_URL`: Your PostgreSQL connection string
 
 ### Steps
 
-1. **Connect GitHub Repository**
+1. **Set up PostgreSQL Database** (Choose one)
    - Go to [Vercel Dashboard](https://vercel.com/dashboard)
    - Click "Add New" → "Project"
    - Import your GitHub repository: `codewithsatyamsharma/minihackthonsprint`
