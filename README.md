@@ -27,17 +27,18 @@ DevHub is a full-stack developer social platform where developers build their pu
 ### 1. Clone and install
 
 ```bash
+git clone https://github.com/codewithsatyamsharma/minihackthonsprint.git
+cd minihackthonsprint
 pnpm install
 ```
 
 ### 2. Environment Variables
 
-Create a `.env` file or set the following in your environment:
+Copy `.env.example` to `.env` and update values:
 
-| Variable | Description |
-|---|---|
-| `DATABASE_URL` | PostgreSQL connection string (e.g. `postgresql://user:pass@host/db`) |
-| `SESSION_SECRET` | Secret key used to sign JWTs (any long random string) |
+```bash
+cp .env.example .env
+```
 
 ### 3. Push the database schema
 
@@ -52,10 +53,10 @@ Run INSERT statements to seed users/projects/posts. Demo accounts use `password1
 ### 5. Run in development
 
 ```bash
-# API server (port 5000 / $PORT)
+# Terminal 1: API server (port 3001)
 pnpm --filter @workspace/api-server run dev
 
-# Frontend (port auto-assigned via $PORT)
+# Terminal 2: Frontend (port 3000)
 pnpm --filter @workspace/devhub run dev
 ```
 
@@ -65,6 +66,10 @@ pnpm --filter @workspace/devhub run dev
 pnpm run typecheck
 pnpm run build
 ```
+
+## Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for Vercel deployment instructions.
 
 ## Database Schema
 
